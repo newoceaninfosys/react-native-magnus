@@ -45,6 +45,7 @@ const Select = React.forwardRef<SelectRef, SelectProps>(
       renderSearchInput,
       searchableProps,
       onSelect: onSelectProp,
+      onHide,
     } = props;
     const { theme } = useTheme();
     const [visible, setVisible] = useState(props.isVisible || false);
@@ -286,6 +287,7 @@ const Select = React.forwardRef<SelectRef, SelectProps>(
           margin: 0,
           justifyContent: 'flex-end',
         }}
+        onModalHide={onHide}
       >
         <Div style={computedStyle.wrapper}>
           <SafeAreaView style={computedStyle.container}>

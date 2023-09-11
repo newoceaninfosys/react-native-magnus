@@ -53,4 +53,6 @@ export interface SelectProps
   renderNoResultsView?: (searchTerm: string) => React.ReactElement;
   renderSubmitButton?: () => React.ReactElement;
   renderSearchInput?: (props: { clearText: () => void }) => React.ReactElement;
+
+  onHide?: () => void;
 }
